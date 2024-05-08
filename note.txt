@@ -1,0 +1,18 @@
+react router dom: library
+
+========================
+
+Hooks: stateless (function)
+    - useState
+    - useEffect
+    - useCallback
+    - useMemo
+    - memo
+    - custom hook
+    - useRef 
+    - useReducer
+
+========================
+
+get list movie
+get detail movie
