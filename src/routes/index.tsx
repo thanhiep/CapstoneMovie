@@ -3,12 +3,15 @@ import HomeTemplate from "../pages/HomeTemplate";
 import AdminTemplate from "../pages/AdminTemplate";
 import AuthenPage from "../pages/AuthenPage";
 import HomePage from "../pages/HomeTemplate/HomePage";
-import AboutPage from "../pages/HomeTemplate/AboutPage";
+
 import ListMoviePage from "../pages/HomeTemplate/ListMoviePage";
 import DashboardPage from "../pages/AdminTemplate/DashboardPage";
 import AddUserPage from "../pages/AdminTemplate/AddUserPage";
-import HooksPage from "../pages/HomeTemplate/HooksPage";
+
 import DetailMovie from "../pages/HomeTemplate/DetailMovie";
+import LoginPage from "../pages/AuthenPage/login";
+import SignupPage from "../pages/AuthenPage/signup";
+import TicketPage from "../pages/HomeTemplate/TicketPage";
 
 type TRoute = {
   path: string;
@@ -22,10 +25,9 @@ const routes: Array<TRoute> = [
     element: HomeTemplate,
     nested: [
       { path: "", element: HomePage },
-      { path: "about", element: AboutPage },
       { path: "list-movie", element: ListMoviePage },
-      { path: "hooks", element: HooksPage },
       { path: "movie-detail/:id", element: DetailMovie },
+      { path: "/ticket/:id", element: TicketPage },
     ],
   },
   {
@@ -40,6 +42,10 @@ const routes: Array<TRoute> = [
   {
     path: "auth",
     element: AuthenPage,
+    nested: [
+      { path: "login", element: LoginPage },
+      { path: "signup", element: SignupPage },
+    ],
   },
 ];
 

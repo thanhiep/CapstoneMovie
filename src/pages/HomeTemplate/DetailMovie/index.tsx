@@ -1,10 +1,11 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { actFetchDetailMovie } from "./duck/actions";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../store";
 import dayjs from "dayjs";
 import LichChieu from "./lichChieu";
+import "./style.css";
 
 export default function DetailMovie() {
   const { id } = useParams();
@@ -20,25 +21,26 @@ export default function DetailMovie() {
   }, [id]);
 
   const renderMovieDetail = () => {
-    if (loading) return <div>Loading...</div>;
     if (data) {
       const date = new Date(data.ngayKhoiChieu);
       return (
-        <div className="row py-5">
+        <div className="row">
           <div className="col-md-3">
             <img
               src={data.hinhAnh}
               className="w-100 rounded"
-              height={400}
+              height={300}
               alt={data.tenPhim}
             />
           </div>
           <div className="col-md-9">
-            <h4>{data.tenPhim}</h4>
+            <h4 className="movieTitle">{data.tenPhim}</h4>
             <p>Mô tả: {data.moTa}</p>
             <p>Ngày khởi chiếu: {dayjs(date).format("DD/MM/YYYY - hh:mm A")}</p>
             <p>Đánh giá: {data.danhGia}/10</p>
-            <button className="btn btn-success">Xem trailer</button>
+            <Link to={data.trailer} target="_blank" className="btn btnTrailer">
+              Xem trailer
+            </Link>
           </div>
         </div>
       );
@@ -46,16 +48,24 @@ export default function DetailMovie() {
   };
 
   const renderLichChieu = () => {
-    if(loading) return <div>Loading...</div>
-    if(data){
-      return <LichChieu movieDetail = {data}/>
+    if (data) {
+      return <LichChieu movieDetail={data} />;
     }
-  }
+  };
+
+  if (loading)
+    return (
+      <div className="spinner-border" role="status">
+        <span className="sr-only">Loading...</span>
+      </div>
+    );
 
   return (
-    <div className="container">
+    <div className="container detailMovie">
+      <h3 className="title">Thông tin phim</h3>
       {renderMovieDetail()}
-     {renderLichChieu()}
+      <h3 className="title">Lịch chiếu phim</h3>
+      {renderLichChieu()}
     </div>
   );
 }

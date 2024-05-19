@@ -1,0 +1,35 @@
+.bannerItem{
+    padding-top: 60px;
+    height: 100vh;
+}
+
+.banner .carousel-control-prev,
+.banner .carousel-control-next {
+  display: none;
+}
+
+.listPhimHot{
+  padding: 40px 0;
+}
+
+.listPhimHot h3{
+  color: #1de782;
+  text-align: center;
+  padding-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.seeMore{
+  justify-content: center;
+}
+
+.btnSeeMore{
+  display: inline-block;
+  border: 1px solid white;
+    color: white;
+}
+
+.btnSeeMore:hover{
+  border-color: #1DE782;
+  color: #1DE782;
+}

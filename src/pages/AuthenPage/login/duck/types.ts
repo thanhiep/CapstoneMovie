@@ -2,7 +2,7 @@ export type CurrentUser = {
   taiKhoan: string;
   hoTen: string;
   email: string;
-  soDt: string;
+  soDT: string;
   maNhom: string,
   maLoaiNguoiDung: string;
   accessToken: string;

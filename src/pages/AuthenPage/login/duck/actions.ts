@@ -1,6 +1,6 @@
 import * as ActionType from "./constants";
-import { Action } from "../../../store/types";
-import api from "../../../utils/apiUtil";
+import { Action } from "../../../../store/types";
+import api from "../../../../utils/apiUtil";
 
 export const actFetchUserLogin = (user: {
   taiKhoan: string;

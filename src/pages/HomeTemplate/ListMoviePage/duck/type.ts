@@ -6,7 +6,7 @@ export type Movie = {
     hinhAnh: string,
     moTa: string,
     maNhom: string,
-    ngayKhoiChieu:string,
+    ngayKhoiChieu:Date,
     danhGia: number,
     hot: boolean,
     dangChieu: boolean,

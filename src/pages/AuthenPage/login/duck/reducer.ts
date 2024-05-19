@@ -1,6 +1,6 @@
 import * as ActionType from "./constants";
-import { Action } from "../../../store/types";
-import { AppStateDetail } from "../../../store/types";
+import { Action } from "../../../../store/types";
+import { AppStateDetail } from "../../../../store/types";
 import { CurrentUser } from "./types";
 
 const currentUser = localStorage.getItem("user")

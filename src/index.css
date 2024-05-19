@@ -12,8 +12,6 @@ code {
     monospace;
 }
 
-.my-active{
-  background-color: white;
-  color: red !important;
+.btn:focus{
+  box-shadow: none !important;
 }
-
