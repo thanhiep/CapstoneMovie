@@ -28,7 +28,6 @@ export default function ListMoviePage() {
     ));
   };
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     dispatch(actFetchListData());
   },[]);
