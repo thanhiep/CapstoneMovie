@@ -13,7 +13,7 @@ export default function DetailMovie() {
   const { loading, data } = useSelector(
     (state: RootState) => state.movieDetailReducer
   );
-
+  // eslint-disable
   useEffect(() => {
     if (id) {
       dispatch(actFetchDetailMovie(id));

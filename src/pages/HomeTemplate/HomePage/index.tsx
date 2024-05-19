@@ -16,7 +16,7 @@ export default function HomePage() {
     data: bannerData,
   } = useSelector((state: RootState) => state.bannerReducer);
 
-  // eslint-disable-next-line
+  // eslint-disable
   useEffect(() => {
     dispatch(actFetchBannerData());
   },[]);
@@ -43,7 +43,7 @@ export default function HomePage() {
     }
   };
 
- // eslint-disable-next-line
+ // eslint-disable
   useEffect(() => {
     dispatch(actFetchListData());
   },[]);

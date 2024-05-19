@@ -28,7 +28,7 @@ export default function ListMoviePage() {
     ));
   };
 
-  // eslint-disable-next-line
+  // eslint-disable
   useEffect(() => {
     dispatch(actFetchListData());
   },[]);

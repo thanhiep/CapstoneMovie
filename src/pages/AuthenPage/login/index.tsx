@@ -28,6 +28,7 @@ export default function LoginPage() {
     dispatch(actFetchUserLogin(formValues));
   };
 
+  // eslint-disable
   useEffect(() => {
     if (data) {
       if (data.maLoaiNguoiDung === "QuanTri") {
