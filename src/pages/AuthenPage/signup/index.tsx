@@ -21,7 +21,7 @@ export default function SignupPage() {
   const {data:userLogin} = useSelector((state:RootState)=>state.userReducer)
   const [isModalOpen, setIsModalOpen] = useState(false);
   const dispatch: any = useDispatch();
-  const { loading, data: userSignup, error } = useSelector(
+  const { loading, data: userSignup } = useSelector(
     (state: RootState) => state.userSignupReducer
   );
   
