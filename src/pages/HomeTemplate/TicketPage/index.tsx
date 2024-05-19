@@ -15,13 +15,13 @@ export default function TicketPage() {
   const {
     loading,
     data: seatData,
-    error,
   } = useSelector((state: RootState) => state.seatReducer);
 
   const { danhSachGheDangChon } = useSelector(
     (state: RootState) => state.datVeReducer
   );
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (id) {
       dispatch(actFetchSeatData(id));

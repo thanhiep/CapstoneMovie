@@ -14,6 +14,7 @@ export default function DetailMovie() {
     (state: RootState) => state.movieDetailReducer
   );
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (id) {
       dispatch(actFetchDetailMovie(id));
