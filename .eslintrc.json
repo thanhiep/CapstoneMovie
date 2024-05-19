@@ -1,0 +1,9 @@
+{
+  "plugins": ["react-hooks"],
+  "rules": {
+    "react-hooks/exhaustive-deps": ["warn", {
+      "additionalHooks": "useEffect" // Bỏ qua cảnh báo cho useEffect
+    }]
+  }
+}
+  
