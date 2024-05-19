@@ -28,7 +28,6 @@ export default function LoginPage() {
     dispatch(actFetchUserLogin(formValues));
   };
 
-  // eslint-disable-next-line
   useEffect(() => {
     if (data) {
       if (data.maLoaiNguoiDung === "QuanTri") {

@@ -14,7 +14,6 @@ export default function DetailMovie() {
     (state: RootState) => state.movieDetailReducer
   );
 
-  // eslint-disable-next-line
   useEffect(() => {
     if (id) {
       dispatch(actFetchDetailMovie(id));
