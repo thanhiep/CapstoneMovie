@@ -28,7 +28,7 @@ export default function LoginPage() {
     dispatch(actFetchUserLogin(formValues));
   };
 
-  
+  // eslint-disable-next-line
   useEffect(() => {
     if (data) {
       if (data.maLoaiNguoiDung === "QuanTri") {
@@ -36,7 +36,6 @@ export default function LoginPage() {
       }
       window.history.back();
     }
-    // eslint-disable-line react-hooks/exhaustive-deps
   }, [data]);
 
   return (

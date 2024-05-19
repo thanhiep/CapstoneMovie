@@ -3,13 +3,10 @@ import "./style.css";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../../store";
 import { actFetchUserLogin } from "../../../AuthenPage/login/duck/actions";
-import { useEffect } from "react";
 
 export default function Header() {
   const { data } = useSelector((state: RootState) => state.userReducer);
   const dispatch:any = useDispatch()
-
-  useEffect(()=>{},[])
 
   const renderUILogin = () => {
     if (data)
