@@ -21,7 +21,7 @@ export default function TicketPage() {
     (state: RootState) => state.datVeReducer
   );
 
-  // eslint-disable
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (id) {
       dispatch(actFetchSeatData(id));

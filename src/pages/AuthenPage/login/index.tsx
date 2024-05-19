@@ -28,7 +28,7 @@ export default function LoginPage() {
     dispatch(actFetchUserLogin(formValues));
   };
 
-  // eslint-disable
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (data) {
       if (data.maLoaiNguoiDung === "QuanTri") {
