@@ -25,8 +25,6 @@
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.51.4",
-    "react-modal-video": "^2.0.1",
-    "react-popupbox": "^2.0.9",
     "react-redux": "^9.1.1",
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
@@ -67,5 +65,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "gh-pages": "^6.1.1"
-  }
+  },
+  "homepage": "https://thanhiep.github.io/CapstoneMovie"
+
 }
