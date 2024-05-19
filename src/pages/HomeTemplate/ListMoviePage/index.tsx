@@ -31,7 +31,7 @@ export default function ListMoviePage() {
   // eslint-disable-next-line
   useEffect(() => {
     dispatch(actFetchListData());
-  }, []);
+  });
 
   if (loading)
     return (

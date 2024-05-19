@@ -14,13 +14,12 @@ export default function HomePage() {
   const {
     loading: loadingBanner,
     data: bannerData,
-    error,
   } = useSelector((state: RootState) => state.bannerReducer);
 
   // eslint-disable-next-line
   useEffect(() => {
     dispatch(actFetchBannerData());
-  }, []);
+  });
 
   const { data: listMovieData, loading: loadingListMovie } = useSelector(
     (state: RootState) => state.listMovieReducer
@@ -47,7 +46,7 @@ export default function HomePage() {
  // eslint-disable-next-line
   useEffect(() => {
     dispatch(actFetchListData());
-  }, []);
+  });
 
   const renderBanner = () => {
     if (loadingBanner)
