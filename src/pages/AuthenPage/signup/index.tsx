@@ -9,23 +9,44 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import "./../../HomeTemplate/_components/css/form.css";
 import "./../../HomeTemplate/DetailMovie/style.css";
 
+const alphaNumericRegex = /^[a-zA-Z0-9]+$/;
+const phoneRegex = /^(0[3|5|7|8|9])+([0-9]{8})$/;
+const vietnameseAlphaRegex =
+  /^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưỰỰỮụủạảấầẩẫậắằẳẵặẹẻẽềếềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỹÝỶỸỴýỳỷỹỵ ]+$/;
+
 const schema = yup.object({
-  taiKhoan: yup.string().required("(*) Vui lòng nhập tài khoản"),
-  matKhau: yup.string().required("(*) Vui lòng nhập mật khẩu"),
-  email: yup.string().required("(*) Vui lòng nhập email"),
-  soDt: yup.string().required("(*) Vui lòng nhập số điện thoại"),
-  hoTen: yup.string().required("(*) Vui lòng nhập họ tên"),
+  taiKhoan: yup
+    .string()
+    .required("(*) Vui lòng nhập tài khoản")
+    .matches(alphaNumericRegex, "(*) Tài khoản chỉ được nhập chữ và số")
+    .min(4, "(*) Tài khoản phải có ít nhất 4 kí tự"),
+  matKhau: yup
+    .string()
+    .required("(*) Vui lòng nhập mật khẩu")
+    .min(8, "(*) Mật khẩu phải có ít nhất 8 kí tự"),
+  email: yup
+    .string()
+    .required("(*) Vui lòng nhập email")
+    .email("(*) Email không đúng định dạng"),
+  soDt: yup
+    .string()
+    .required("(*) Vui lòng nhập số điện thoại")
+    .matches(phoneRegex, "(*) Số điện thoại không đúng định dạng"),
+  hoTen: yup
+    .string()
+    .required("(*) Vui lòng nhập họ tên")
+    .matches(vietnameseAlphaRegex, "(*) Họ tên chỉ được nhập chữ"),
 });
 
 export default function SignupPage() {
-  const {data:userLogin} = useSelector((state:RootState)=>state.userReducer)
+  const { data: userLogin } = useSelector(
+    (state: RootState) => state.userReducer
+  );
   const [isModalOpen, setIsModalOpen] = useState(false);
   const dispatch: any = useDispatch();
   const { loading, data: userSignup } = useSelector(
     (state: RootState) => state.userSignupReducer
   );
-  
-  
 
   const { handleSubmit, register, formState } = useForm<any>({
     defaultValues: {
@@ -36,6 +57,7 @@ export default function SignupPage() {
       maNhom: "",
       hoTen: "",
     },
+    mode: "onChange",
     resolver: yupResolver(schema),
   });
 
@@ -48,11 +70,11 @@ export default function SignupPage() {
     setIsModalOpen(false);
   };
 
-  if(userLogin){
-    if(userLogin.maLoaiNguoiDung === "QuanTri"){
-      return <Navigate to={"/admin/dashboard"}/>
+  if (userLogin) {
+    if (userLogin.maLoaiNguoiDung === "QuanTri") {
+      return <Navigate to={"/admin/dashboard"} />;
     }
-    return <Navigate to={"/"}/>
+    return <Navigate to={"/"} />;
   }
 
   return (
@@ -162,7 +184,9 @@ export default function SignupPage() {
             <div className="modal-content">
               <div className="modal-header">
                 <h5 className="modal-title">
-                  {userSignup ? "Đăng ký thành công" : "Đăng ký không thành công"}
+                  {userSignup
+                    ? "Đăng ký thành công"
+                    : "Đăng ký không thành công"}
                 </h5>
                 <button
                   type="button"
