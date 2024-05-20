@@ -1,3 +1,0 @@
-export const USER_SIGNUP_REQUEST = "@user/USER_SIGNUP_REQUEST";
-export const USER_SIGNUP_SUCCESS = "@user/USER_SIGNUP_SUCCESS";
-export const USER_SIGNUP_FAILED = "@user/USER_SIGNUP_FAILED";

@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/CapstoneMovie/static/css/main.9344e827.css",
+    "main.js": "/CapstoneMovie/static/js/main.495e3cf3.js",
+    "static/js/453.08c727d1.chunk.js": "/CapstoneMovie/static/js/453.08c727d1.chunk.js",
+    "static/media/Ellipse1.png": "/CapstoneMovie/static/media/Ellipse1.5c9557fe14b53329d3d4.png",
+    "static/media/Ellipse2.png": "/CapstoneMovie/static/media/Ellipse2.bd051e33ef61339e564f.png",
+    "index.html": "/CapstoneMovie/index.html",
+    "main.9344e827.css.map": "/CapstoneMovie/static/css/main.9344e827.css.map",
+    "main.495e3cf3.js.map": "/CapstoneMovie/static/js/main.495e3cf3.js.map",
+    "453.08c727d1.chunk.js.map": "/CapstoneMovie/static/js/453.08c727d1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9344e827.css",
+    "static/js/main.495e3cf3.js"
+  ]
+}
