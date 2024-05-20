@@ -1,0 +1,116 @@
+.detailMovie {
+  padding-top: 80px;
+}
+
+.detailMovie .title {
+  text-align: center;
+  color: #1de782;
+  padding: 40px 0;
+  text-transform: uppercase;
+}
+
+.detailMovie .movieTitle {
+  font-size: 30px;
+}
+
+.detailMovie p,
+.detailMovie .tenCum,
+.detailMovie .movieTitle,
+.detailMovie .btnTrailer:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.detailMovie .tenRap {
+  color: #1de782;
+}
+
+.detailMovie .tenCum {
+  padding: 10px 0;
+}
+
+.detailMovie .nav-pills .nav-link {
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  margin-bottom: 8px;
+}
+
+.detailMovie .nav-pills .nav-link.active {
+  background-color: #1de782 !important;
+}
+
+.detailMovie .btnTrailer {
+  border: 1px solid #1de782;
+  color: #1de782;
+}
+
+.detailMovie .btnLichChieu {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background-color: transparent;
+  transition: 0.2s;
+}
+
+.detailMovie .btnLichChieu:hover,
+.detailMovie .btnTrailer:hover {
+  border: 1px solid transparent;
+  background-color: #1de782;
+}
+
+
+/* modal */
+.modal {
+  position: fixed;
+  display: block;
+  z-index: 1;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+  background: #121212;
+  border: none;
+}
+
+.modal-header {
+  text-align: center;
+}
+
+.modal-header .modal-title,
+.close {
+  font-size: 20px;
+  color: #1de782;
+}
+
+.modal-body p {
+  color: white;
+}
+
+.btnAuthSignup,
+.btnBackToHome {
+  color: white;
+  border: 1px solid white;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.btnAuthSignup:hover,
+.btnBackToHome:hover {
+  color: #1de782;
+  border-color: #1de782;
+}
+
+.btnAuthLogin {
+  color: #1de782;
+  font-size: 16px;
+  border: 1px solid #1de782;
+  transition: 0.2s;
+}
+
+.btnAuthLogin:hover {
+  color: white;
+  border-color: white;
+}
